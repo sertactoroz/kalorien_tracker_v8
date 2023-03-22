@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:kalorientracker/view/pages/login_page.dart';
+import 'package:kalorientracker/view/pages/register_page.dart';
+import 'package:kalorientracker/view/widgets/email_text_field.dart';
+import 'package:kalorientracker/view/widgets/login_button.dart';
+import 'package:kalorientracker/view/widgets/register_button.dart';
 
 import '../widgets/custom_navbar.dart';
+import '../widgets/password_text.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -42,10 +48,23 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Kalorien App"),
+        title: Padding(
+          padding: const EdgeInsets.all(2.0),
+          child: Image.asset("assets/kalorien_logo.png/"),
+        ),
         backgroundColor: Colors.green,
       ),
-      bottomNavigationBar: CustomNavbar(),
+      body: SafeArea(
+        child: Column(
+          children: const [
+            SizedBox(
+              height: 20,
+            ),
+            RegisterScreen()
+          ],
+        ),
+      ),
+      bottomNavigationBar: const CustomNavbar(),
     );
   }
 }
