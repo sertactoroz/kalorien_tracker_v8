@@ -1,21 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:kalorientracker/view/pages/login_page.dart';
-import 'package:kalorientracker/view/pages/register_page.dart';
-import 'package:kalorientracker/view/widgets/email_text_field.dart';
-import 'package:kalorientracker/view/widgets/login_button.dart';
-import 'package:kalorientracker/view/widgets/register_button.dart';
 
 import '../widgets/custom_navbar.dart';
-import '../widgets/password_text.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
@@ -77,7 +71,6 @@ class _HomePageState extends State<HomePage> {
             SizedBox(
               height: 20,
             ),
-            RegisterScreen()
           ],
         ),
       ),

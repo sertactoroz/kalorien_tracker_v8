@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'appinit.dart';
 
-import 'package:kalorientracker/view/pages/login_page.dart';
-
 void main() {
   runApp(const MyApp());
 }

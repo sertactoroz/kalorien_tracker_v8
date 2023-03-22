@@ -1,7 +1,7 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import '/view/pages/login_page.dart';
+import 'package:kalorientracker/view/pages/login_screen.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:lottie/lottie.dart';
 
