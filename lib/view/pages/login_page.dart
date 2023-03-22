@@ -13,22 +13,24 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        LottieBuilder.network(
-          "https://assets9.lottiefiles.com/packages/lf20_XpVCMJTSQt.json",
-          width: 300,
-          height: 300,
-        ),
-        Column(
-          children: const [
-            UserNameTextField(),
-            PasswordTextField(),
-            LoginButton(),
-            RegisterButton(),
-          ],
-        ),
-      ],
+    return Scaffold(
+      body: Column(
+        children: [
+          LottieBuilder.network(
+            "https://assets9.lottiefiles.com/packages/lf20_XpVCMJTSQt.json",
+            width: 300,
+            height: 300,
+          ),
+          Column(
+            children: const [
+              UserNameTextField(),
+              PasswordTextField(),
+              LoginButton(),
+              RegisterButton(),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:kalorientracker/view/pages/home_page.dart';
+import '/view/pages/login_page.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:lottie/lottie.dart';
 
@@ -37,11 +37,12 @@ class _AppInitState extends State<AppInit> {
             backgroundColor: Colors.white,
             screenFunction: () async {
               await openAudio();
-              return const HomePage();
+              // await player.dispose();
+              return const LoginScreen();
             },
             curve: Curves.ease,
             splashIconSize: 60,
-            duration: 5000,
+            duration: 6000,
             splashTransition: SplashTransition.fadeTransition,
             pageTransitionType: PageTransitionType.rightToLeft,
           ),

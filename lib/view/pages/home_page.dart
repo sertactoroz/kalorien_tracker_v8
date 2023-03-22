@@ -64,13 +64,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
         title: Image.asset(
           'assets/logo.png',
           fit: BoxFit.cover,
           height: 30,
         ),
-
         backgroundColor: Colors.white,
       ),
       body: SafeArea(
