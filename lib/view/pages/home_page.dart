@@ -48,11 +48,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Padding(
-          padding: const EdgeInsets.all(2.0),
-          child: Image.asset("assets/kalorien_logo.png/"),
-        ),
-        backgroundColor: Colors.green,
+        // title: Image.asset("assets/kalorien_logo.png/"),
+        backgroundColor: Colors.white,
       ),
       body: SafeArea(
         child: Column(
