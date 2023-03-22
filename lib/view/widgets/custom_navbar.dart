@@ -62,7 +62,7 @@ class _CustomNavbarState extends State<CustomNavbar> {
         ),
       ],
       currentIndex: _selectedIndex,
-      selectedItemColor: Colors.amber[800],
+      selectedItemColor: Colors.amber[300],
       onTap: _onItemTapped,
     );
   }
