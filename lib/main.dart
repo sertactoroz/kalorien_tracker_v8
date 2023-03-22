@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kalorientracker/view/pages/home_page.dart';
+import 'package:provider/provider.dart';
+
+import 'appinit.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,8 +14,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HomePage(),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Kalorien',
+      themeMode: ThemeMode.dark,
+      home: AppInit(),
     );
   }
 }
