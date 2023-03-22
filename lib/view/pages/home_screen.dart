@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import '../widgets/custom_navbar.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
@@ -65,7 +65,16 @@ class _HomePageState extends State<HomePage> {
         ),
         backgroundColor: Colors.white,
       ),
-      bottomNavigationBar: CustomNavbar(),
+      body: SafeArea(
+        child: Column(
+          children: const [
+            SizedBox(
+              height: 20,
+            ),
+          ],
+        ),
+      ),
+      bottomNavigationBar: const CustomNavbar(),
     );
   }
 }
