@@ -42,8 +42,12 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.amber,
-        leading: Image.asset('assets/images/logo.png', height: 30),
+        title: Image.asset(
+          'assets/logo.png',
+          fit: BoxFit.cover,
+          height: 30,
+        ),
+        backgroundColor: Colors.white,
       ),
       bottomNavigationBar: CustomNavbar(),
     );
