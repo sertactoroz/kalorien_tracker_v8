@@ -44,11 +44,33 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+// @override
+//   Widget build(BuildContext context) {
+//     return AnimatedSplashScreen.withScreenFunction(
+//       splash: "assets/icon.png",
+//       backgroundColor: Colors.black,
+//       screenFunction: () async {
+//         await context.read<TimelinePageViewModel>().getListData();
+//         return const HomePage();
+//       },
+//       curve: Curves.easeInOutBack,
+//       splashIconSize: 250,
+//       splashTransition: SplashTransition.fadeTransition,
+//       pageTransitionType: PageTransitionType.fade,
+//     );
+//   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // title: Image.asset("assets/kalorien_logo.png/"),
+
+        title: Image.asset(
+          'assets/logo.png',
+          fit: BoxFit.cover,
+          height: 30,
+        ),
+
         backgroundColor: Colors.white,
       ),
       body: SafeArea(

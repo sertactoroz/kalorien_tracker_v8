@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:kalorientracker/view/pages/home_page.dart';
+
+
+import 'appinit.dart';
+
 import 'package:kalorientracker/view/pages/login_page.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +18,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+
+      title: 'Kalorien',
+      themeMode: ThemeMode.dark,
+      home: AppInit(),
+
+      home: LoginPage(),
+
     );
   }
 }
