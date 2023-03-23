@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:kalorientracker/models/user_model.dart';
+import 'package:kalorientracker/view/pages/home_screen.dart';
 import 'package:kalorientracker/view/pages/login_screen.dart';
 import 'package:kalorientracker/view/pages/register_screen.dart';
 import 'package:provider/provider.dart';
 
 import '../pages/providers/user_provider.dart';
 
-class LoginRegisterButton extends StatefulWidget {
-  const LoginRegisterButton({super.key});
+class LoginButton extends StatefulWidget {
+  const LoginButton({super.key});
 
   @override
-  State<LoginRegisterButton> createState() => _LoginRegisterButton();
+  State<LoginButton> createState() => _LoginRegisterButton();
 }
 
-class _LoginRegisterButton extends State<LoginRegisterButton> {
+class _LoginRegisterButton extends State<LoginButton> {
   late TextEditingController usernameController;
   late TextEditingController passwordController;
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   @override
   void initState() {
-    usernameController =
-        TextEditingController(text: "umutcanbostanci@gmail.com");
-    passwordController = TextEditingController(text: "12345678");
+    usernameController = TextEditingController(text: "");
+    passwordController = TextEditingController(text: "");
     super.initState();
   }
 
@@ -44,15 +44,11 @@ class _LoginRegisterButton extends State<LoginRegisterButton> {
               _button(() async {
                 try {
                   if (_formKey.currentState!.validate()) {
-                    await userProvider.addUser(
-                        UserModel(
-                            email: usernameController.text,
-                            password: passwordController.text),
-                        );
+                    await userProvider.setUsers();
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const LoginScreen()));
+                            builder: (context) => const HomeScreen()));
                   }
                 } catch (e) {
                   print(e.toString());

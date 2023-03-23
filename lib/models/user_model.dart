@@ -53,13 +53,14 @@ class UserModel {
       age: map['age'] != null ? map['age'] as int : null,
       email: map['email'] != null ? map['email'] as String : null,
       image: map['image'] != null ? map['image'] as String : null,
-      password: map['password'] != null ? map['password'] as String : null,
+      password: map['password'] != null ? map['password'] as dynamic : null,
     );
   }
 
   String toJson() => json.encode(toMap());
 
-  factory UserModel.fromJson(String source) => UserModel.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory UserModel.fromJson(String source) =>
+      UserModel.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
   String toString() {
@@ -69,23 +70,22 @@ class UserModel {
   @override
   bool operator ==(covariant UserModel other) {
     if (identical(this, other)) return true;
-  
-    return 
-      other.id == id &&
-      other.name == name &&
-      other.age == age &&
-      other.email == email &&
-      other.image == image &&
-      other.password == password;
+
+    return other.id == id &&
+        other.name == name &&
+        other.age == age &&
+        other.email == email &&
+        other.image == image &&
+        other.password == password;
   }
 
   @override
   int get hashCode {
     return id.hashCode ^
-      name.hashCode ^
-      age.hashCode ^
-      email.hashCode ^
-      image.hashCode ^
-      password.hashCode;
+        name.hashCode ^
+        age.hashCode ^
+        email.hashCode ^
+        image.hashCode ^
+        password.hashCode;
   }
-  }
+}
