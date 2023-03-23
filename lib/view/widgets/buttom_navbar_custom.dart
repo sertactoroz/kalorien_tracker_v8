@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CustomNavbar extends StatefulWidget {
-  const CustomNavbar({super.key});
+class ButtomNavbarCustom extends StatefulWidget {
+  const ButtomNavbarCustom({super.key});
 
   @override
-  State<CustomNavbar> createState() => _CustomNavbarState();
+  State<ButtomNavbarCustom> createState() => _ButtomNavbarCustomState();
 }
 
-class _CustomNavbarState extends State<CustomNavbar> {
+class _ButtomNavbarCustomState extends State<ButtomNavbarCustom> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);

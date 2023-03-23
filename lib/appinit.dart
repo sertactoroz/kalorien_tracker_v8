@@ -33,7 +33,7 @@ class _AppInitState extends State<AppInit> {
       body: Stack(
         children: [
           AnimatedSplashScreen.withScreenFunction(
-            splash: "assets/logo.png",
+            splash: "assets/png/kalorien.png",
             backgroundColor: Colors.white,
             screenFunction: () async {
               await openAudio();
@@ -42,7 +42,7 @@ class _AppInitState extends State<AppInit> {
             },
             curve: Curves.ease,
             splashIconSize: 60,
-            duration: 6000,
+            duration: 1000,
             splashTransition: SplashTransition.fadeTransition,
             pageTransitionType: PageTransitionType.rightToLeft,
           ),
@@ -53,7 +53,7 @@ class _AppInitState extends State<AppInit> {
             ),
             child: Center(
               child: Lottie.asset(
-                'assets/fruit_beat_4.json',
+                'assets/json/fruit_beat_3.json',
                 width: 300,
                 height: 300,
                 fit: BoxFit.cover,

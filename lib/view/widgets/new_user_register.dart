@@ -34,8 +34,12 @@ class _NewUserRegisterState extends State<NewUserRegister> {
             //         email: usernameController.text,
             //         password: passwordController.text);
             // print(credential);
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => LoginScreen()));
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => LoginScreen(),
+              ),
+            );
           } catch (e) {
             print(e.toString());
           }

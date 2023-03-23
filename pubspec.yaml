@@ -41,6 +41,7 @@ dependencies:
   page_transition: ^2.0.9
   lottie: ^2.3.0
   flare_flutter: ^3.0.0
+  carousel_slider: ^4.2.1
 
 dev_dependencies:
   flutter_test:
@@ -69,6 +70,9 @@ flutter:
     - assets/
     - assets/sounds/
     - assets/icons/
+    - assets/png/
+    - assets/json/
+    # - assets/png/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
