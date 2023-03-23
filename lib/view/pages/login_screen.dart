@@ -13,12 +13,19 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          LottieBuilder.network(
-            "https://assets9.lottiefiles.com/packages/lf20_XpVCMJTSQt.json",
-            width: 300,
-            height: 300,
+          Padding(
+            padding: const EdgeInsets.all(30.0),
+            child: LottieBuilder.network(
+              "https://assets9.lottiefiles.com/packages/lf20_XpVCMJTSQt.json",
+              width: 300,
+              height: 300,
+            ),
           ),
-          const LoginRegisterButton()
+          Spacer(),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: const LoginRegisterButton(),
+          )
         ],
       ),
     );

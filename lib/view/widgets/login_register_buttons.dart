@@ -77,12 +77,9 @@ class _LoginRegisterButton extends State<LoginRegisterButton> {
             },
             child: const Text('Register'),
           ),
-          // SizedBox(
-          //   height: 10,
-          // ),
-          // Column(
-          //   children: [FruitSearchBar()],
-          // )
+          SizedBox(
+            height: 30,
+          ),
         ],
       ),
     );
@@ -100,12 +97,32 @@ class _LoginRegisterButton extends State<LoginRegisterButton> {
       );
 
   Widget _button(Function() onPressed, String text) {
-    return SizedBox(
-        width: 150,
-        height: 42,
-        child: OutlinedButton(
-          onPressed: onPressed,
-          child: Text(text),
-        ));
+    //
+    //
+    return Padding(
+      padding: EdgeInsets.all(12),
+      child: Row(
+        children: [
+          Expanded(
+            child: ElevatedButton(
+              onPressed: onPressed,
+              child: Text(text),
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Color(0xFF25A74A),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(14)),
+                  minimumSize: Size(50, 75) // put the width and height you want
+                  ),
+            ),
+          ),
+        ],
+      ),
+    );
+    // return SizedBox(
+    //     height: 42,
+    //     child: OutlinedButton(
+    //       onPressed: onPressed,
+    //       child: Text(text),
+    //     ));
   }
 }
