@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
 import 'package:kalorientracker/view/widgets/login_register_buttons.dart';
+import 'package:kalorientracker/view/widgets/new_user_register.dart';
 import 'package:lottie/lottie.dart';
 
 class LoginScreen extends StatelessWidget {

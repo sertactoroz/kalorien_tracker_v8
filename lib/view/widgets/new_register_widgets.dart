@@ -6,14 +6,14 @@ import 'package:provider/provider.dart';
 
 import '../pages/providers/user_provider.dart';
 
-class LoginRegisterButton extends StatefulWidget {
-  const LoginRegisterButton({super.key});
+class NewUserRegister extends StatefulWidget {
+  const NewUserRegister({super.key});
 
   @override
-  State<LoginRegisterButton> createState() => _LoginRegisterButton();
+  State<NewUserRegister> createState() => _LoginRegisterButton();
 }
 
-class _LoginRegisterButton extends State<LoginRegisterButton> {
+class _LoginRegisterButton extends State<NewUserRegister> {
   late TextEditingController usernameController;
   late TextEditingController passwordController;
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
@@ -45,10 +45,10 @@ class _LoginRegisterButton extends State<LoginRegisterButton> {
                 try {
                   if (_formKey.currentState!.validate()) {
                     await userProvider.addUser(
-                        UserModel(
-                            email: usernameController.text,
-                            password: passwordController.text),
-                        );
+                      UserModel(
+                          email: usernameController.text,
+                          password: passwordController.text),
+                    );
                     Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -57,7 +57,7 @@ class _LoginRegisterButton extends State<LoginRegisterButton> {
                 } catch (e) {
                   print(e.toString());
                 }
-              }, "Login"),
+              }, "Register"),
               const SizedBox(
                 height: 20,
               ),
@@ -83,7 +83,7 @@ class _LoginRegisterButton extends State<LoginRegisterButton> {
                     ),
                   );
                 },
-                child: const Text('Register'),
+                child: const Text('Login'),
               ),
               // SizedBox(
               //   height: 10,

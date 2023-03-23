@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:kalorientracker/view/widgets/login_register_buttons.dart';
 
 import 'package:kalorientracker/view/widgets/new_user_register.dart';
 
@@ -19,9 +20,7 @@ class RegisterScreen extends StatelessWidget {
             width: 300,
             height: 300,
           ),
-          Column(
-            children: const [NewUserRegister()],
-          ),
+          const LoginRegisterButton(),
         ],
       ),
     );

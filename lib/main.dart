@@ -1,9 +1,17 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:kalorientracker/view/pages/providers/user_provider.dart';
+import 'package:provider/provider.dart';
 
 import 'appinit.dart';
 
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp();
+  runApp(MultiProvider(
+    providers: [ChangeNotifierProvider(create: (_) => UserProvider())],
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
