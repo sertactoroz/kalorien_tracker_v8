@@ -43,7 +43,7 @@ class _AppInitState extends State<AppInit> {
             },
             curve: Curves.ease,
             splashIconSize: 60,
-            duration: 6000,
+            duration: 2,
             splashTransition: SplashTransition.fadeTransition,
             pageTransitionType: PageTransitionType.rightToLeft,
           ),

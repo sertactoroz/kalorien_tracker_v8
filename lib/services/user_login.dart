@@ -18,10 +18,12 @@ class Services {
 
   Future<List<UserModel>> getUsers() async {
     ApiConfig.shared.token = "";
-    http.Response response = await http.get(getUrl("users"));
     List<UserModel> list = [];
+
+    http.Response response = await http.get(getUrl("users"));
     if (response.statusCode >= 200 && response.statusCode < 300) {
       var data = json.decode(response.body);
+      print(data);
       for (var key in data.keys) {
         UserModel user = UserModel.fromMap(data[key]);
         user.id = key;
@@ -43,7 +45,8 @@ class Services {
 
   Future<UserModel?> postUser(UserModel user) async {
     http.Response response = await http.post(getAuthUrl("signUp"),
-        body: user.toJson(), headers: {"Content-Type": "application/json"});
+        body: json.encode(user.toMap()),
+        headers: {"Content-Type": "application/json"});
     if (response.statusCode >= 200 && response.statusCode < 300) {
       var data = json.decode(response.body);
       // user.id = data["name"];
@@ -55,7 +58,8 @@ class Services {
 
   Future<bool> updateUser(UserModel user) async {
     http.Response response = await http.put(getUrl("users/${user.id}"),
-        body: user.toJson(), headers: {"Content-Type": "application/json"});
+        body: json.encode(user.toMap()),
+        headers: {"Content-Type": "application/json"});
     return response.statusCode >= 200 && response.statusCode < 300;
   }
 
@@ -63,4 +67,10 @@ class Services {
     http.Response response = await http.delete(getUrl("users/$id"));
     return response.statusCode >= 200 && response.statusCode < 300;
   }
+
+  // Future<bool> signInUser(UserModel user) async {
+  //   http.Response response = await http.put(getAuthUrl("sign in}"),
+  //       body: user.toJson(), headers: {"Content-Type": "application/json"});
+  //   return response.statusCode >= 200 && response.statusCode < 300;
+  // }
 }

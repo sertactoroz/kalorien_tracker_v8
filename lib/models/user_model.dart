@@ -39,7 +39,7 @@ class UserModel {
     return <String, dynamic>{
       'id': id,
       'name': name,
-      'age': age,
+      'age': age.toString(),
       'email': email,
       'image': image,
       'password': password,
@@ -57,7 +57,7 @@ class UserModel {
     );
   }
 
-  String toJson() => json.encode(toMap());
+  String fromJson() => json.encode(toMap());
 
   factory UserModel.fromJson(String source) =>
       UserModel.fromMap(json.decode(source) as Map<String, dynamic>);
