@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kalorientracker/view/pages/login_screen.dart';
 import 'package:kalorientracker/view/pages/register_screen.dart';
+import 'package:kalorientracker/view/widgets/my_list_animation.dart';
 
 import '../widgets/custom_navbar.dart';
 
@@ -53,7 +54,7 @@ class _HomePageState extends State<HomePage> {
             SizedBox(
               height: 20,
             ),
-            RegisterScreen()
+            const MyListScreen()
           ],
         ),
       ),
