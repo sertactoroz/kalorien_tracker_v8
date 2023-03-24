@@ -29,39 +29,37 @@ class _AppInitState extends State<AppInit> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: [
-          AnimatedSplashScreen.withScreenFunction(
-            splash: "assets/png/kalorien.png",
-            backgroundColor: Colors.white,
-            screenFunction: () async {
-              await openAudio();
-              // await player.dispose();
-              return const LoginScreen();
-            },
-            curve: Curves.ease,
-            splashIconSize: 60,
-            duration: 1000,
-            splashTransition: SplashTransition.fadeTransition,
-            pageTransitionType: PageTransitionType.rightToLeft,
+    return Stack(
+      children: [
+        AnimatedSplashScreen.withScreenFunction(
+          splash: "assets/png/kalorien.png",
+          backgroundColor: Colors.white,
+          screenFunction: () async {
+            await openAudio();
+            // await player.dispose();
+            return const LoginScreen();
+          },
+          curve: Curves.ease,
+          splashIconSize: 60,
+          duration: 1000,
+          splashTransition: SplashTransition.fadeTransition,
+          pageTransitionType: PageTransitionType.rightToLeft,
+        ),
+        Padding(
+          padding: const EdgeInsets.only(
+            bottom: 25.0,
+            right: 25,
           ),
-          Padding(
-            padding: const EdgeInsets.only(
-              bottom: 25.0,
-              right: 25,
-            ),
-            child: Center(
-              child: Lottie.asset(
-                'assets/json/fruit_beat_3.json',
-                width: 300,
-                height: 300,
-                fit: BoxFit.cover,
-              ),
+          child: Center(
+            child: Lottie.asset(
+              'assets/json/fruit_beat_3.json',
+              width: 300,
+              height: 300,
+              fit: BoxFit.cover,
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

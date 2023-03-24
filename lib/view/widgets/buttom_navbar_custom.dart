@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:kalorientracker/constants/constants.dart';
+import 'package:kalorientracker/view/pages/login_screen.dart';
+
+import '../../home_page.dart';
+import '../pages/home_screen.dart';
+import '../pages/profile_screen.dart';
+import 'package:molten_navigationbar_flutter/molten_navigationbar_flutter.dart';
 
 class ButtomNavbarCustom extends StatefulWidget {
-  const ButtomNavbarCustom({super.key});
+  const ButtomNavbarCustom({Key? key}) : super(key: key);
 
   @override
   State<ButtomNavbarCustom> createState() => _ButtomNavbarCustomState();
@@ -9,31 +17,58 @@ class ButtomNavbarCustom extends StatefulWidget {
 
 class _ButtomNavbarCustomState extends State<ButtomNavbarCustom> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 3: Settings',
-      style: optionStyle,
-    ),
-  ];
 
   void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
+    if (index == 0) {
+      // Navigate to the ProfileScreen widget
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => HomeScreen(),
+        ),
+      );
+    }
+    if (index == 1) {
+      // Navigate to the ProfileScreen widget
+      // Navigator.push(
+      //   context,
+      //   MaterialPageRoute(
+      //     builder: (context) => ProfileScreen(),
+      //   ),
+      // );
+    }
+    if (index == 2) {
+      // Navigate to the ProfileScreen widget
+      // Navigator.push(
+      //   context,
+      //   MaterialPageRoute(
+      //     builder: (context) => LoginScreen(),
+      //   ),
+      // );
+    }
+
+    if (index == 3) {
+      // Navigate to the ProfileScreen widget
+      // Navigator.push(
+      //   context,
+      //   MaterialPageRoute(
+      //     builder: (context) => ProfileScreen(),
+      //   ),
+      // );
+    }
+    if (index == 4) {
+      // Navigate to the ProfileScreen widget
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => ProfileScreen(),
+        ),
+      );
+    } else {
+      setState(() {
+        _selectedIndex = index;
+      });
+    }
   }
 
   @override
@@ -41,28 +76,32 @@ class _ButtomNavbarCustomState extends State<ButtomNavbarCustom> {
     return BottomNavigationBar(
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
-          icon: Icon(Icons.home),
-          label: 'Home',
-          backgroundColor: Colors.grey,
+            icon: Icon(Icons.home),
+            label: 'Home',
+            backgroundColor: Color(0xFF25A74A)),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.search),
+          label: 'Food',
+          backgroundColor: Color(0xFF25A74A),
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.business),
-          label: 'Business',
-          backgroundColor: Colors.amber,
+          icon: Icon(Icons.apple),
+          label: 'Diet',
+          backgroundColor: Color(0xFF25A74A),
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.school),
-          label: 'School',
-          backgroundColor: Colors.lightGreen,
+          icon: Icon(Icons.calendar_month),
+          label: 'Calendar',
+          backgroundColor: Color(0xFF25A74A),
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.settings),
-          label: 'Settings',
-          backgroundColor: Colors.pink,
+          icon: Icon(Icons.person),
+          label: 'Profile',
+          backgroundColor: Color(0xFF25A74A),
         ),
       ],
       currentIndex: _selectedIndex,
-      selectedItemColor: Colors.amber[300],
+      selectedItemColor: Colors.white,
       onTap: _onItemTapped,
     );
   }

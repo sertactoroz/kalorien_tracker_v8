@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:kalorientracker/constants/constants.dart';
 import 'package:kalorientracker/view/pages/home_screen.dart';
 import 'package:kalorientracker/view/pages/register_screen.dart';
 import 'package:kalorientracker/view/widgets/appbar_custom.dart';
+import 'package:flutter/src/widgets/framework.dart';
 
 import 'package:kalorientracker/view/widgets/custom_button.dart';
 import 'package:kalorientracker/view/widgets/animation_orange.dart';
 import 'package:kalorientracker/view/widgets/text_input.dart';
-import 'package:lottie/lottie.dart';
+
+import '../../home_page.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -32,7 +32,7 @@ class LoginScreen extends StatelessWidget {
               label: 'e-mail',
               textController: TextEditingController(),
             ),
-            CustomButton(
+            CustomButton1(
               text: 'Login',
               onPressed: () {
                 Navigator.push(
@@ -45,7 +45,7 @@ class LoginScreen extends StatelessWidget {
               color: greenCustom,
               textColor: Colors.white,
             ),
-            CustomButton(
+            CustomButton1(
               text: 'Register',
               onPressed: () {
                 Navigator.push(

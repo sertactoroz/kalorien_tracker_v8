@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kalorientracker/view_models/provider/home_screen_view_model.dart';
+import 'package:provider/provider.dart';
 
 import 'appinit.dart';
 
@@ -12,11 +14,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Kalorien',
-      themeMode: ThemeMode.dark,
-      home: AppInit(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => HomeScreenViewModel()),
+      ],
+      child: const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Kalorien',
+        themeMode: ThemeMode.dark,
+        home: AppInit(),
+      ),
     );
   }
 }

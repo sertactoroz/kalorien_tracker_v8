@@ -33,7 +33,7 @@ class RegisterScreen extends StatelessWidget {
               label: 'e-mail',
               textController: TextEditingController(),
             ),
-            CustomButton(
+            CustomButton1(
               text: 'Register',
               onPressed: () {
                 Navigator.push(

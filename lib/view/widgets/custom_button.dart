@@ -84,8 +84,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
-class CustomButton extends StatelessWidget {
-  const CustomButton({
+class CustomButton1 extends StatelessWidget {
+  const CustomButton1({
     Key? key,
     required this.text,
     required this.onPressed,
