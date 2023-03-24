@@ -2,6 +2,7 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:kalorientracker/view/pages/login_screen.dart';
+import 'package:kalorientracker/view/pages/register_screen.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:lottie/lottie.dart';
 
@@ -42,7 +43,7 @@ class _AppInitState extends State<AppInit> {
             },
             curve: Curves.ease,
             splashIconSize: 60,
-            duration: 6000,
+            duration: 2,
             splashTransition: SplashTransition.fadeTransition,
             pageTransitionType: PageTransitionType.rightToLeft,
           ),
