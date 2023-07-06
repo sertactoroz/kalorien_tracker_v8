@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "543686872914",
+    "firebase_url": "https://kalorien-tracker-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "kalorien-tracker",
+    "storage_bucket": "kalorien-tracker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:543686872914:android:a1d89b3f3e61a18af3348b",
+        "android_client_info": {
+          "package_name": "com.example.kalorientracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "543686872914-tqk0l61tcmukgsp2digvgnl56mj8b1kk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_S_wU5BXr0ktDrL7r7IGo9Gp0hpGgov8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "543686872914-tqk0l61tcmukgsp2digvgnl56mj8b1kk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

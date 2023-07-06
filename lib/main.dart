@@ -1,15 +1,17 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-// import 'package:model_test/pages/login/login_page.dart';
-// import 'package:model_test/view_models/profile_view_model.dart';
+import 'package:kalorientracker/view/pages/providers/user_provider.dart';
 import 'package:provider/provider.dart';
-import 'dart:convert';
-// import 'pages/profile/profile_page.dart';
-import 'models/user_model.dart';
-import 'view/home_page.dart';
-// import 'view_models/login_view_model.dart';
+
+import 'appinit.dart';
 
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp();
+  runApp(MultiProvider(
+    providers: [ChangeNotifierProvider(create: (_) => UserProvider())],
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -18,15 +20,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [],
-      child: MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: const HomePage(),
-      ),
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Kalorien',
+      themeMode: ThemeMode.dark,
+      home: AppInit(),
     );
   }
 }
